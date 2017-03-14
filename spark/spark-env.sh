@@ -65,3 +65,11 @@
 # - SPARK_NICENESS      The scheduling priority for daemons. (Default: 0)
 # - SPARK_NO_DAEMONIZE  Run the proposed command in the foreground. It will not output a PID file.
 JAVA_HOME=/opt/jdk1.8.0_101
+
+BD_DIR=$HOME/bd_cfg
+BD_TMP_DIR=$HOME/bd_tmp
+
+HADOOP_CONF_DIR=$BD_DIR/hadoop
+SPARK_CONF_DIR=$BD_DIR/spark
+SPARK_LOG_DIR=$BD_TMP_DIR/spark/logs
+SPARK_PID_DIR=$BD_TMP_DIR/spark

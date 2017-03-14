@@ -32,9 +32,3 @@ BD_DIR=$HOME/bd_cfg
 BD_TMP_DIR=$HOME/bd_tmp
 ## HADOOP配置
 export HADOOP_CONF_DIR=$BD_DIR/hadoop
-export HADOOP_PID_DIR=$BD_TMP_DIR/hadoop
-export HADOOP_LOG_DIR=$BD_TMP_DIR/hadoop/logs
-## SPARK配置
-export SPARK_CONF_DIR=$BD_DIR/spark
-export SPARK_PID_DIR=$BD_TMP_DIR/spark
-export SPARK_LOG_DIR=$BD_TMP_DIR/spark/logs
