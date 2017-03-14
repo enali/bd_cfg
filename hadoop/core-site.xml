@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+  <!-- 指定hdfs的namenode节点 -->
+  <property>
+    <name>fs.defaultFS</name>
+    <value>hdfs://SM1</value>
+  </property>
+
+  <!-- 指定各种目录的前缀 -->
+  <property>
+    <name>hadoop.tmp.dir</name>
+    <value>${user.home}/bd_tmp</value>
+  </property>
+</configuration>

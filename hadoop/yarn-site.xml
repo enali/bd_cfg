@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<configuration>
+  <!-- 指定resourceManager的节点 -->
+  <property>
+    <name>yarn.resourcemanager.hostname</name>
+    <value>sm1</value>
+  </property>
+  <!-- 指定在nodeManager启动shuffle服务 -->
+  <property>
+    <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+  </property>
+
+  <!-- 之所以注释掉, 因为指定hadoop.tmp.dir后, 默认nm-local-dir目录 -->
+
+  <!-- 用于存储app本地文件的目录列表 -->
+  <!-- <property> -->
+  <!--   <name>yarn.nodemanager.local-dirs</name> -->
+  <!--   <value>/opt/hadoop-2.7.3/nm-local-dir</value> -->
+  <!-- </property> -->
+</configuration>

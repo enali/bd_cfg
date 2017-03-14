@@ -1,0 +1,32 @@
+#!/bin/bash
+# vim:set ft=sh:
+
+APP_DIR=/opt
+
+JDK_VER=1.8.0_101
+SCALA_VER=2.11.8
+HADOOP_VER=2.7.3
+SPARK_VER=2.1.0
+LLVM_VER=3.9.0
+# KAFKA_VER=2.11-0.10.0.1
+# ZK_VER=3.4.9
+# HIVE_VER=2.1.1
+
+## 核心大数据应用配置
+export JAVA_HOME=$APP_DIR/jdk$JDK_VER
+export SCALA_HOME=$APP_DIR/scala-$SCALA_VER
+export SBT_HOME=$APP_DIR/sbt
+export HADOOP_HOME=$APP_DIR/hadoop-$HADOOP_VER
+export SPARK_HOME=$APP_DIR/spark-$SPARK_VER-bin-hadoop2.7
+
+export LLVM_HOME=$APP_DIR/clang+llvm-$LLVM_VER-x86_64-linux-gnu-ubuntu-16.04
+
+# export KAFKA_HOME=$APP_DIR/kafka_$KAFKA_VER
+# export ZK_HOME=$APP_DIR/zookeeper-$ZK_VER
+# export HIVE_HOME=$APP_DIR/apache-hive-$HIVE_VER-bin
+
+## PATH配置
+export PATH=$JAVA_HOME/bin:$SCALA_HOME/bin:$SBT_HOME/bin:$HADOOP_HOME/bin:$SPARK_HOME/bin:$LLVM_HOME/bin:$PATH
+
+## HADOOP配置
+export HADOOP_CONF_DIR=$HOME/bd_cfg/hadoop

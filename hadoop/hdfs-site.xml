@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+  <!-- 指定hdfs默认的文件存储副本数 -->
+  <property>
+    <name>dfs.replication</name>
+    <value>3</value>
+  </property>
+
+  <!-- 之所以要注释掉, 是因为在core-site.xml中定义hadoop.tmp.dir属性即可, --> 
+  <!-- 这样默认保存在dfs/name, dfs/data, dfs/namesecondary这三个目录下 -->
+
+  <!-- 指定name的保存目录列表 -->
+  <!-- <property> -->
+  <!--   <name>dfs.namenode.name.dir</name> -->
+  <!--   <value>/opt/hadoop-2.7.3/hdfs/name</value> -->
+  <!-- </property> -->
+  <!-- 指定data的保存目录列表 -->
+  <!-- <property> -->
+  <!--   <name>dfs.datanode.data.dir</name> -->
+  <!--   <value>/opt/hadoop-2.7.3/hdfs/data</value> -->
+  <!-- </property> -->
+  <!-- 指定辅助name的用于合并的临时image的存储目录列表 -->
+  <!-- <property> -->
+  <!--   <name>dfs.namenode.checkpoint.dir</name> -->
+  <!--   <value>/opt/hadoop-2.7.3/hdfs/namesecondary</value> -->
+  <!-- </property> -->
+</configuration>
