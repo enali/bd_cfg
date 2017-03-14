@@ -65,4 +65,3 @@
 # - SPARK_NICENESS      The scheduling priority for daemons. (Default: 0)
 # - SPARK_NO_DAEMONIZE  Run the proposed command in the foreground. It will not output a PID file.
 JAVA_HOME=/opt/jdk1.8.0_101
-HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
