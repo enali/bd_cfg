@@ -7,6 +7,8 @@ alias hls='hdfs dfs -ls'
 alias hrm='hdfs dfs -rm'
 # 在HDFS新建目录
 alias hmd='hdfs dfs -mkdir'
+# 在HDFS移动文件
+alias hmv='hdfs dfs -mv'
 # 推送本地文件到HDFS
 alias hput='hdfs dfs -put'
 # 获取HDFS文件到本地

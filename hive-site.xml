@@ -1,0 +1,32 @@
+<configuration>
+  <!-- 服务端配置 -->
+  <!-- hiveserver2服务器的监听主机和端口 -->
+  <property>
+    <name>hive.server2.thrift.bind.host</name>
+    <value>0.0.0.0</value>
+  </property>
+  <property>
+    <name>hive.server2.thrift.port</name>
+    <value>10000</value>
+  </property>
+  <!-- metastore存储在远程pg数据库的连接方式 -->
+  <property>
+    <name>javax.jdo.option.ConnectionURL</name>
+    <value>jdbc:postgresql://192.168.106.13:5432/metastore?createDatabaseIfNotExist=true</value>
+    <description>the URL of the PostgreSQL database</description>
+  </property>
+  <!-- jdbc连接pg数据库的驱动器类名 -->
+  <property>
+    <name>javax.jdo.option.ConnectionDriverName</name>
+    <value>org.postgresql.Driver</value>
+    <description>Driver class name for a JDBC metastore</description>
+  </property>
+  <property>
+    <name>javax.jdo.option.ConnectionUserName</name>
+    <value>hive</value>
+  </property>
+  <property>
+    <name>javax.jdo.option.ConnectionPassword</name>
+    <value>hive</value>
+  </property>
+</configuration>

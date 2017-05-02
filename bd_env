@@ -8,27 +8,36 @@ SCALA_VER=2.11.8
 HADOOP_VER=2.7.3
 SPARK_VER=2.1.0
 LLVM_VER=3.9.0
-# KAFKA_VER=2.11-0.10.0.1
-# ZK_VER=3.4.9
-# HIVE_VER=2.1.1
+KAFKA_VER=2.11-0.10.0.1
+ZK_VER=3.4.9
+HIVE_VER=2.1.1
+ANT_VER=1.10.1
 
 ## 核心大数据应用配置
 export JAVA_HOME=$APP_DIR/jdk$JDK_VER
 export SCALA_HOME=$APP_DIR/scala-$SCALA_VER
 export SBT_HOME=$APP_DIR/sbt
+export ANT_HOME=$APP_DIR/apache-ant-$ANT_VER
 export HADOOP_HOME=$APP_DIR/hadoop-$HADOOP_VER
 export SPARK_HOME=$APP_DIR/spark-$SPARK_VER-bin-hadoop2.7
 
 export LLVM_HOME=$APP_DIR/clang+llvm-$LLVM_VER-x86_64-linux-gnu-ubuntu-16.04
 
-# export KAFKA_HOME=$APP_DIR/kafka_$KAFKA_VER
-# export ZK_HOME=$APP_DIR/zookeeper-$ZK_VER
-# export HIVE_HOME=$APP_DIR/apache-hive-$HIVE_VER-bin
+export KAFKA_HOME=$APP_DIR/kafka_$KAFKA_VER
+export ZK_HOME=$APP_DIR/zookeeper-$ZK_VER
+export HIVE_HOME=$APP_DIR/apache-hive-$HIVE_VER-bin
 
 ## PATH配置
-export PATH=$JAVA_HOME/bin:$SCALA_HOME/bin:$SBT_HOME/bin:$HADOOP_HOME/bin:$SPARK_HOME/bin:$LLVM_HOME/bin:$PATH
+export PATH=$JAVA_HOME/bin:$SCALA_HOME/bin:$SBT_HOME/bin:$HADOOP_HOME/bin:$SPARK_HOME/bin:$LLVM_HOME/bin:$ANT_HOME/bin:$KAFKA_HOME/bin:$ZK_HOME/bin:$HIVE_HOME/bin:$PATH
 
 BD_DIR=$HOME/bd_cfg
 BD_TMP_DIR=$HOME/bd_tmp
 ## HADOOP配置
+# hadoop的日志目录,文件目录,PID文件等在core-site.xml文件的hadoop.tmp.dir设置
 export HADOOP_CONF_DIR=$BD_DIR/hadoop
+export HADOOP_LOG_DIR=$BD_TMP_DIR/hadoop/logs
+export YARN_LOG_DIR=$BD_TMP_DIR/hadoop/logs
+export SPARK_CONF_DIR=$BD_DIR/spark
+export SPARK_LOG_DIR=$BD_TMP_DIR/spark/logs
+export SPARK_PID_DIR=$BD_TMP_DIR/spark
+export SPARK_WORKER_DIR=$BD_TMP_DIR/spark/work

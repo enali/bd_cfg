@@ -64,12 +64,12 @@
 # - SPARK_IDENT_STRING  A string representing this instance of spark. (Default: $USER)
 # - SPARK_NICENESS      The scheduling priority for daemons. (Default: 0)
 # - SPARK_NO_DAEMONIZE  Run the proposed command in the foreground. It will not output a PID file.
-JAVA_HOME=/opt/jdk1.8.0_101
+export JAVA_HOME=${JAVA_HOME}
 
-BD_DIR=$HOME/bd_cfg
-BD_TMP_DIR=$HOME/bd_tmp
+export HADOOP_CONF_DIR=${HADOOP_CONF_DIR}
+export SPARK_CONF_DIR=${SPARK_CONF_DIR}
+export SPARK_LOG_DIR=${SPARK_LOG_DIR}
+export SPARK_PID_DIR=${SPARK_PID_DIR}
+# export SPARK_LOCAL_DIRS=
 
-HADOOP_CONF_DIR=$BD_DIR/hadoop
-SPARK_CONF_DIR=$BD_DIR/spark
-SPARK_LOG_DIR=$BD_TMP_DIR/spark/logs
-SPARK_PID_DIR=$BD_TMP_DIR/spark
+export PYSPARK_DRIVER_PYTHON=ipython
